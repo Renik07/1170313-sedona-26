@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ренат Гаязутдинов](https://up.htmlacademy.ru/htmlcss/26/user/1170313).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Маркелов](https://htmlacademy.ru/profile/nikolamarkelov).
 
 ---
 
