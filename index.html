@@ -31,8 +31,32 @@
     </section>
     <section>
       <h2>Поиск гостиницы в Седоне</h2>
-      <!--Здесь будет форма-->
-      <button type="button">Найти</button>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label for="date-in">Дата заезда:</label>
+          <input type="date" name="date-arrival" id="date-in" placeholder="24.04.2017">
+          <button type="button"><img src="img/calendar.svg" alt="Кнопка календарь"></button>
+        </p>
+        <p>
+          <label for="date-out">Дата выезда:</label>
+          <input type="date" name="date-departure" id="date-out">
+          <button type="button"><img src="img/calendar.svg" alt="Кнопка календарь"></button>
+        </p>
+        <p>
+          <label for="numberadults">Взрослые:</label>
+          <button type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+          <input type="text" name="adults" id="numberadults" value="2">
+          <button type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+        </p>
+        <p>
+          <label for="numberkids">Дети:</label>
+          <button type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+          <input type="text" name="kids" id="numberkids" value="0">
+          <button type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+        </p>
+        <button type="submit">Найти</button>
+      </form>
+
     </section>
     <!--Здесь будет блок-->
   </main>
