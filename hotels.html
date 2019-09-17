@@ -23,7 +23,79 @@
   <main>
     <h1>Гостиницы</h1>
     <section>
-      <!--Здесь будет блок-->
+      <section>
+        <h2>Фильтры</h2>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <div>
+            <h3>Инфраструктура:</h3>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <label for="filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Тип жилья:</h3>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wi-fi" id="filter-wi-fi" checked>
+                <label for="filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Стоимость в сутки (Р):</h3>
+            <p>
+              <input type="text" name="price" placeholder="от 0">
+              <input type="text" name="price" placeholder="до 3000">
+            </p>
+            <p>
+              <input type="range" min="0" max="3000" step="100">
+            </p>
+            <p>
+              <button type="submit">Найти</button>
+            </p>
+          </div>
+        </form>
+      </section>
+    </section>
+    <section>
+      <div>
+        <h3>Найдено:3</h3>
+        <p>Сортировка:</p>
+        <ul>
+          <li>
+            <a href="">По цене</a>
+          </li>
+          <li>
+            <a href="">По типу</a>
+          </li>
+          <li>
+            <a href="">По рейтингу</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <a href=""><img src="img/up.svg" alt="Сортировка по возрастанию"></a>
+        <a href=""><img src="img/down.svg" alt="Сортировка по убыванию"></a>
+      </div>
     </section>
     <section>
       <ul>
