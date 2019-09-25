@@ -4,27 +4,30 @@
 <head>
   <meta charset="utf-8">
   <title>Гостиницы</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="ptsans/PTSans/">
 </head>
 
 <body>
-  <header>
-    <nav>
+  <header class="main-header">
+    <nav class="main-navigation">
       <a href="index.html">
         <img src="img/logo-sedona.svg" alt="Logo Sedona" width="138" height="71">
       </a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="">Информация</a></li>
         <li><a href="">Фото и видео</a></li>
         <li><a href="">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
+        <li><a class="hotel-color" href="hotels.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Гостиницы</h1>
+  <main class="container">
+    <h1 class="visually-hidden">Гостиницы</h1>
     <section>
       <section>
-        <h2>Фильтры</h2>
+        <h2 class="visually-hidden">Фильтры</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Инфраструктура:</legend>
@@ -94,86 +97,90 @@
         <a href=""><img src="img/down.svg" alt="Сортировка по убыванию"></a>
       </div>
     </section>
-    <section>
+    <section class="search-results">
+      <h2 class="visually-hidden"> Результаты поиска гостиницы</h2>
       <ul>
         <li>
-          <article>
+          <article class="search-results-item">
             <div>
               <h2>Amara Resort & Spa</h2>
               <p>
                 Гостиница от 4000 р.
               </p>
-              <p>
-                <a href="">Подробнее</a>
-                <a href="">Забронировать</a>
+              <p class="button-list">
+                <a class="button-detail" href="">Подробнее</a>
+                <a class="button-reserve" href="">Забронировать</a>
               </p>
               <p>
-                <a href=""><img src="img/hotel-1.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90"></a>
+                <img src="img/hotel-1.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
               </p>
             </div>
-            <section>
-              <p>рейтинг: 8,5</p>
-            </section>
+            <div class="rating">
+              <div class="stars"></div>
+              <p class="value">рейтинг: 8,5</p>
+            </div>
           </article>
         </li>
         <li>
-          <article>
+          <article class="search-results-item">
             <div>
               <h2>Desert Quail & Spa</h2>
               <p>
                 Мотель от 3000 р.
               </p>
-              <p>
-                <a href="">Подробнее</a>
-                <a href="">Забронировать</a>
+              <p class="button-list">
+                <a class="button-detail" href="">Подробнее</a>
+                <a class="button-reserve" href="">Забронировать</a>
               </p>
               <p>
                 <a href=""><img src="img/hotel-2.jpg" alt="Мотель Desert Quail & Spa" width="135" height="90"></a>
               </p>
             </div>
-            <section>
-              <p>рейтинг: 8,9</p>
-            </section>
+            <div class="rating">
+              <div class="stars"></div>
+              <p class="value">рейтинг: 8,9</p>
+            </div>
           </article>
         </li>
         <li>
-          <article>
+          <article class="search-results-item">
             <div>
               <h2>Villas At Poco Diablo</h2>
               <p>
                 Аппартаменты от 2000 р.
               </p>
-              <p>
-                <a href="">Подробнее</a>
-                <a href="">Забронировать</a>
+              <p class="button-list">
+                <a class="button-detail" href="">Подробнее</a>
+                <a class="button-reserve" href="">Забронировать</a>
               </p>
               <p>
                 <a href=""><img src="img/hotel-3.jpg" alt="Апартаменты Villas At Poco Diablo" width="135"
                     height="90"></a>
               </p>
             </div>
-            <section>
-              <p>рейтинг: 9,2</p>
-            </section>
+            <div class="rating">
+              <div class="stars"></div>
+              <p class="value">рейтинг: 9,2</p>
+            </div>
           </article>
         </li>
       </ul>
     </section>
   </main>
-  <footer>
-    <p>
-      <a href="">#Visitsedona</a>
+  <footer class="main-footer">
+    <p class="footer-visit">
+      #Visitsedona
     </p>
-    <div>
+    <div class="footer-social">
       <ul>
         <a href=""><img src="img/twitter.svg" alt="twitter" width="46" height="48"></a>
         <a href=""><img src="img/fb.svg" alt="facebook" width="46" height="48"></a>
         <a href=""><img src="img/youtube.svg" alt="youtube" width="46" height="48"></a>
       </ul>
     </div>
-    <p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy.svg" alt="Website by HTML Academy" width="115" height="41">
+    <p class="footer-copyright">
+      <a href="https://htmlacademy.ru/intensive/htmlcss">Website by<img src="img/logo-htmlacademy.svg"
+          alt="Website by HTML Academy" width="115" height="41"></a>
       </a>
     </p>
   </footer>

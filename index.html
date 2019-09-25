@@ -4,29 +4,38 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="ptsans/PTSans/">
 </head>
 
 <body>
-  <header>
-    <nav>
+  <header class="main-header">
+    <nav class="main-navigation">
       <img src="img/logo-sedona.svg" alt="Logo Sedona" width="138" height="71">
-      <ul>
+      <ul class="site-navigation">
         <li><a href="">Информация</a></li>
         <li><a href="">Фото и видео</a></li>
         <li><a href="">Карта штата</a></li>
         <li><a href="hotels.html">Гостиницы</a></li>
       </ul>
-      <img src="index-logo2.svg" alt="Sedona logo" width="" height="">
+      <div class="intro">
+        <div>
+          <img src="img/intro-welcome.svg" alt="Добро пожаловать в Седону" width="" height="">
+        </div>
+      </div>
+
     </nav>
   </header>
-  <main>
-    <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+  <main class="container">
+    <h1>Седона - небольшой городок в Аризоне,<br>
+      заслуживающий большего!</h1>
     <section>
       <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
     </section>
-    <section>
-      <div>
-        <div>
+    <section class="features">
+      <div class="features-list">
+        <div class="features-items">
           <h3>Настоящий городок</h3>
           <p>- №1 -</p>
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
@@ -91,58 +100,59 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="search">
       <h2>Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p>Укажите предполагаемые даты поездки,<br>
+        и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <p>
-        <button type="button">Поиск гостиницы в Седоне</button>
+        <button class="button" type="button">Поиск гостиницы в Седоне</button>
       </p>
     </section>
-    <section>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <p>
+    <section class="search-hostel">
+      <form class="form-hostel" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="search-item">
           <label for="date-in">Дата заезда:</label>
           <input type="date" name="date-arrival" id="date-in" placeholder="24.04.2017">
-          <button type="button"><img src="img/calendar.svg" alt="Кнопка календарь"></button>
+          <button class="button" type="button"><img src="img/calendar.svg" alt="Кнопка календарь"></button>
         </p>
-        <p>
+        <p class="search-item">
           <label for="date-out">Дата выезда:</label>
           <input type="date" name="date-departure" id="date-out">
-          <button type="button"><img src="img/calendar.svg" alt="Кнопка календарь"></button>
+          <button class="button" type="button"><img src="img/calendar.svg" alt="Кнопка календарь"></button>
         </p>
-        <p>
+        <p class="search-item">
           <label for="numberadults">Взрослые:</label>
-          <button type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+          <button class="button" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
           <input type="text" name="adults" id="numberadults" value="2">
-          <button type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+          <button class="button" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
         </p>
-        <p>
+        <p class="search-item">
           <label for="numberkids">Дети:</label>
-          <button type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+          <button class="button" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
           <input type="text" name="kids" id="numberkids" value="0">
-          <button type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+          <button class="button" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
         </p>
-        <button type="submit">Найти</button>
+        <button class="button" type="submit">Найти</button>
       </form>
     </section>
     <section>
       <img src="img/map.jpg" alt="Карта местонахождения города Седона, Arizona 86336, USA" width="1200" height="593">
     </section>
   </main>
-  <footer>
-    <p>
-      <a href="">#Visitsedona</a>
+  <footer class="main-footer">
+    <p class="footer-visit">
+      #Visitsedona
     </p>
-    <div>
+    <div class="footer-social">
       <ul>
         <a href=""><img src="img/twitter.svg" alt="twitter" width="46" height="48"></a>
         <a href=""><img src="img/fb.svg" alt="facebook" width="46" height="48"></a>
         <a href=""><img src="img/youtube.svg" alt="youtube" width="46" height="48"></a>
       </ul>
     </div>
-    <p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy.svg" alt="Website by HTML Academy" width="115" height="41">
+    <p class="footer-copyright">
+      <a href="https://htmlacademy.ru/intensive/htmlcss">Website by<img src="img/logo-htmlacademy.svg"
+          alt="Website by HTML Academy" width="115" height="41"></a>
       </a>
     </p>
   </footer>
