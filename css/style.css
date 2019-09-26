@@ -48,8 +48,10 @@ a {
 .intro {
   color: #5496BD;
   background-image: 
-    url("img/intro-mask.svg"), 
-    url("img/intro-background.jpg");
+    url("../img/intro-background.jpg"),
+    url("../img/intro-mask.svg"); 
+  background-repeat: no-repeat, no-repeat;
+  background-size: 1200px 800px, 1200px 57px;
 }
 
 /* MAIN */
