@@ -66,6 +66,21 @@ a {
   font-weight: 400;
 }
 
+.features-items.block {
+  background-color: #81B3D2;
+  color:#ffffff;
+}
+
+.features-items h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.features-items p {
+  font-weight: 400;
+}
+
 /* Форма поиска гостиницы */
 .search h2 {
   font-size: 30px;
@@ -99,7 +114,6 @@ a {
   background-color: #503E33;
 }
 
-}
 .search-item input {
   font: inherit;
   font-size: 14px;
@@ -124,30 +138,29 @@ a {
   border: none;
 }
 
-/*  в след задании
-.search-item .button:hover {
- как понял с лекции, надо будет 
- всталять .свг-код в html и так менять цвет иконки
+.button-calendar,
+.button-minus,
+.button-plus,
+.up,
+.down {
+  vertical-align: middle;
+  fill: #A9A9A9;
 }
 
-.search-item .button:focus {
- 
-} */
-
-.search-hostel button {
-  background-color: #81B3D2;
-  border: none;
+.button-calendar:hover path,
+.button-minus:hover path,
+.button-plus:hover path,
+.up:hover path,
+.down:hover path {
+  fill: #000000;
 }
 
-.search-hostel button:hover {
-  background-color: #669EC0;
-  border: none;
-}
-
-.search-hostel button:focus {
-  color: rgba(255, 255, 255, 0.5);
-  background-color: #5496BD;
-  border: none;
+.button-calendar:active path,
+.button-minus:active path,
+.button-plus:active path,
+.up:active path,
+.down:active path {
+  fill: #81B3D2;
 }
 
 /* FOOTER */
@@ -164,16 +177,23 @@ a {
   background-color: #669EC0;
 }
 
-/* Аналогично через свг-код в html
-.footer-social img:focus {
-  background-color: #5496BD;
-}  */
-
-.footer-copyright a {
+.footer-copyright {
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
   color: #000000;
+}
+
+.logo-academy path {
+  fill: #000000;
+}
+
+.logo-academy:hover path {
+  fill: #81B3D2;
+}
+
+.logo-academy:active path {
+  fill: #BDBBBC;
 }
 
 /* hotels.html */
@@ -183,6 +203,59 @@ a {
 
 .site-navigation .hotel-color {
   color: #766357;
+}
+
+.filters {
+  background-image: url(../img/blur-background.jpg);
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter ul,
+.sort ul {
+  list-style: none;
+}
+
+.sort h3 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.sort p,
+.sort a {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.sort a {
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px dashed #81B3D2;
+}
+
+.sort a:hover {
+  color: #81B3D2;
+  border-bottom: 1px dashed #81B3D2;
+}
+
+.sort a:active {
+  color: #000000;
+  border-bottom: none;
+}
+
+.rating span {
+  font-weight: 400;
+  background-color: #F2F2F2;
 }
 
 .search-results ul {
