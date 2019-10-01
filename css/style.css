@@ -45,16 +45,30 @@ a {
   opacity: 0.5;
 }
 
+/* MAIN */
+
 .intro {
+  width: 1200px;
+  height: 508px;
+  margin: 0 auto;
   color: #5496BD;
   background-image: 
     url("../img/intro-background.jpg"),
     url("../img/intro-mask.svg"); 
   background-repeat: no-repeat, no-repeat;
   background-size: 1200px 800px, 1200px 57px;
+  background-position-y: -56px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(216, 255, 44);
+} 
+
+.intro-welcome {
+  margin-left: 31%;
+  margin-top: 6%;
+  /* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
 }
 
-/* MAIN */
 .container h1 {
   font-size: 21px;
   line-height: 26px;
@@ -82,16 +96,36 @@ a {
 }
 
 /* Форма поиска гостиницы */
+.search {
+  width: 1200px;
+  height: 291px;
+  margin: 0 auto;
+/* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
+}
+
+.search-hostel {
+  width: 568px;
+  height: 395px;
+  margin: 0 auto;
+  text-align: center;
+
+  /* Временно для сетки */
+  outline: solid 3px rgb(67, 201, 14);
+}
+
 .search h2 {
   font-size: 30px;
   line-height: 24px;
   font-weight: bold;
+  text-align: center;
 }
 
 .search p {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
+  text-align: center;
 }
 
 .button {
@@ -163,7 +197,7 @@ a {
   fill: #81B3D2;
 }
 
-/* FOOTER */
+/* ---------FOOTER -------------- */
 .footer-visit {
   font-size: 21px;
   line-height: 26px;
@@ -196,7 +230,53 @@ a {
   fill: #BDBBBC;
 }
 
-/* hotels.html */
+.main-footer {
+  width: 1200px;
+  height: 120px;
+  padding-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Временно для сетки */
+  outline: solid 3px rgb(219, 20, 136);
+}
+
+.main-footer .footer-container {
+  display: flex;
+  margin-left: 132px;
+  margin-right: 101px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(10, 224, 81);
+}
+
+.footer-visit {
+  margin: 0;
+  width: 136px;
+  margin-right: 256px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
+}
+
+.footer-social {
+  width: 150px;
+  height: 48px;
+
+  /* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  width: 197px;
+  margin: 0;
+  margin-left: auto;
+
+  /* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
+}
+
+/* ----------  hotels.html -------------*/
 .visually-hidden {
   visibility: hidden;
 }
@@ -253,7 +333,7 @@ a {
   border-bottom: none;
 }
 
-.rating span {
+.block-rating span {
   font-weight: 400;
   background-color: #F2F2F2;
 }
@@ -305,3 +385,122 @@ a {
   background-color: #503E33;
   color: rgba(255, 255, 255, 0.5);
 }
+
+
+/*   СЕТОЧНЫЕ СТИЛИ     */
+html, 
+body {
+  min-width: 1200px;
+  min-height: 2762px;
+} 
+
+.main-header {
+  height: 56px;
+  /* Временно для сетки */
+  outline: solid 3px green;
+}
+
+.main-navigation {
+  width: 1200px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
+}
+
+.main-logo-sedona {
+  width: 138px;
+  height: 71px;
+  position: absolute;
+  top: 0;
+  left: 50%; 
+  right: 50%;
+  transform: translateX(-50%);
+  /* Временно для сетки */
+  outline: solid 3px rgb(228, 7, 7);
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1200px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+/* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
+}
+
+/* -----Результаты поиска гостиницы ----*/
+.search-results {
+  width: 1200px;
+  margin: auto;
+  /* Временно для сетки */
+  outline: solid 3px rgb(40, 27, 156);
+}
+
+
+.search-results-item {
+  width: 1056px;
+  height: 151px;
+
+  /* Временно для сетки */
+  outline: solid 3px rgb(41, 171, 247);
+}
+
+.block-hotel {
+  display: flex;
+  justify-content: space-between;
+  width: 423px;
+  height: 90px;
+  float: left;
+  margin-top: 30px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(7, 187, 52);
+}
+
+.block-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 111px;
+  height: 90px;
+  float: right;
+  margin-top: 30px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(7, 187, 52);
+}
+
+.hotel-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 258px;
+  height: 90px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(187, 7, 133);
+}
+
+.hotel-name h2,
+.block-hotel p {
+  padding: 0;
+  margin: 0;
+}
+
+.hotel-cost {
+  display: flex;
+  width: 182px;
+  justify-content: space-between;
+}
+
+.button-list {
+  display: flex;
+  width: 258px;
+  justify-content: space-between;
+}
+
