@@ -72,12 +72,16 @@ a {
 .container h1 {
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
+  padding-top: 46px;
 }
 
 .container h2 {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+  text-align: center;
+  padding-top: 13px;
 }
 
 .features-items.block {
@@ -98,7 +102,6 @@ a {
 /* Форма поиска гостиницы */
 .search {
   width: 1200px;
-  height: 291px;
   margin: 0 auto;
 /* Временно для сетки */
   outline: solid 3px rgb(40, 27, 156);
@@ -119,6 +122,10 @@ a {
   line-height: 24px;
   font-weight: bold;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(226, 70, 22);
 }
 
 .search p {
@@ -126,9 +133,13 @@ a {
   line-height: 24px;
   font-weight: 400;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  /* Временно для сетки */
+  outline: solid 3px rgb(56, 226, 22);
 }
 
-.button {
+.button-search {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -137,13 +148,19 @@ a {
   text-transform: uppercase;
   background-color: #766357;
   border: none;
+  width: 568px;
 }
 
-.button:hover {
+.form-hostel .button-search{
+  background-color: #81B3D2;
+  width: 458px;
+}
+
+.button-search:hover {
   background-color: #604E43;
 }
 
-.button:focus {
+.button-search:focus {
   color: rgba(255, 255, 255, 0.5);
   background-color: #503E33;
 }
@@ -203,12 +220,25 @@ a {
   line-height: 26px;
 }
 
-.footer-social img {
+.footer-icons {
+  display: flex;
+  width: 46px;
+  height: 48px;
   background-color: #81B3D2;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-social img:hover {
+.footer-icons:hover {
   background-color: #669EC0;
+}
+
+.footer-icons:active {
+  background-color: #5496BD;
+}
+
+.footer-icons:active path {
+  fill: rgba(255, 255, 255, 0.5);
 }
 
 .footer-copyright {
@@ -243,6 +273,7 @@ a {
 
 .main-footer .footer-container {
   display: flex;
+  align-items: center;
   margin-left: 132px;
   margin-right: 101px;
   /* Временно для сетки */
@@ -258,6 +289,9 @@ a {
 }
 
 .footer-social {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
   width: 150px;
   height: 48px;
 
@@ -363,11 +397,13 @@ a {
   background-color: #81B3D2;
 }
 
-.button-detail:hover {
+.button-detail:hover,
+.form-hostel .button-search:hover {
   background-color: #669EC0;
 }
 
-.button-detail:active {
+.button-detail:active,
+.form-hostel .button-search:active {
   background-color: #5496BD;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -425,8 +461,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 1200px;
-  height: 56px;
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -445,9 +480,12 @@ body {
 
 
 .search-results-item {
+  display: flex;
+  justify-content: space-between;
   width: 1056px;
-  height: 151px;
-
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 30px;
   /* Временно для сетки */
   outline: solid 3px rgb(41, 171, 247);
 }
@@ -457,8 +495,6 @@ body {
   justify-content: space-between;
   width: 423px;
   height: 90px;
-  float: left;
-  margin-top: 30px;
   /* Временно для сетки */
   outline: solid 3px rgb(7, 187, 52);
 }
@@ -470,8 +506,6 @@ body {
   align-items: flex-end;
   width: 111px;
   height: 90px;
-  float: right;
-  margin-top: 30px;
   /* Временно для сетки */
   outline: solid 3px rgb(7, 187, 52);
 }
