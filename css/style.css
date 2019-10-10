@@ -8,8 +8,10 @@ body {
   font-weight: bold;
   color: #000000;
   text-transform: uppercase;
-
+  width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
 }
 
 img {
@@ -25,11 +27,30 @@ a {
   font-size: 14px;
   line-height: 26px;
   color: #000000;
-
 }
 
 .site-navigation {
   list-style: none;
+  /* Временно для сетки */
+  outline: solid 3px rgb(107, 44, 255);
+}
+
+.site-navigation li:nth-child(1) {
+  padding: 0 73px;
+}
+
+.site-navigation li:nth-child(2) {
+  padding: 0 73px;
+  margin-right: 243px;
+}
+
+.site-navigation li:nth-child(3) {
+  padding: 0 73px;
+}
+
+.site-navigation li:nth-child(4) {
+  margin-left: auto;
+  padding: 0 73px;
 }
 
 .site-navigation a {
@@ -52,19 +73,17 @@ a {
   height: 508px;
   margin: 0 auto;
   color: #5496BD;
-  background-image: 
-    url("../img/intro-background.jpg"),
-    url("../img/intro-mask.svg"); 
-  background-repeat: no-repeat, no-repeat;
-  background-size: 1200px 800px, 1200px 57px;
-  background-position-y: -56px;
+  background: 
+    url("../img/intro-mask.svg") center bottom no-repeat,
+    url("../img/intro-background.jpg") 0 -56px no-repeat;
+  background-size: 1200px 57px, 1200px 800px;
   /* Временно для сетки */
   outline: solid 3px rgb(216, 255, 44);
 } 
 
 .intro-welcome {
-  margin-left: 31%;
-  margin-top: 6%;
+  margin-left: 371px;
+  margin-top: 77px;
   /* Временно для сетки */
   outline: solid 3px rgb(40, 27, 156);
 }
@@ -150,8 +169,76 @@ a {
   height: 395px;
   margin: 0 auto;
   text-align: center;
+  padding: 55px;
+  position: absolute;
+  background-color: #ffffff;
+  left: 29%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.15);
   /* Временно для сетки */
-  outline: solid 3px rgb(113, 68, 236);
+  outline: solid 3px rgb(236, 68, 199);
+}
+
+.form-hostel {
+  width: 458px;
+  /* Временно для сетки */
+  outline: solid 1px rgb(82, 236, 68);
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 32px;
+  /* Временно для сетки */
+  outline: solid 1px rgb(57, 4, 250);
+}
+
+.search-item input {
+  height: 34px;
+  padding-left: 15px;
+  flex-grow: 1;
+  width: 0;
+  font: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+  border: 0px;
+}
+
+.search-item label {
+  margin-right: 20px;
+}
+
+.search-item-elements {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.search-item-elements .adults {
+  margin-right: 40px;
+}
+
+.search-item-elements .kids {
+  margin-right: 30px;
+}
+
+.button.calendar {
+  position: absolute;
+  right: 58px;
+}
+
+.search-item-elements button {
+  padding:  7px 13px 10px 13px;
+  min-height: 100%;
+}
+
+.search-item-elements input {
+  padding: 0;
+  width: 38px;
+  min-height: 100%;
+  text-align: center;
 }
 
 .search h2 {
@@ -171,7 +258,8 @@ a {
   line-height: 24px;
   font-weight: 400;
   text-align: center;
-  padding-top: 13px;
+  padding-top: 26px;
+  margin: 0 auto;
   
   /* Временно для сетки */
   outline: solid 3px rgb(22, 202, 226);
@@ -188,7 +276,7 @@ a {
   border: none;
   width: 568px;
   height: 86px;
-  margin-top: 19px;
+  margin-top: 21px;
 }
 
 .form-hostel .button-search{
@@ -204,15 +292,6 @@ a {
 .button-search:focus {
   color: rgba(255, 255, 255, 0.5);
   background-color: #503E33;
-}
-
-.search-item input {
-  font: inherit;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  background-color: #F2F2F2;
-  border: 0px;
 }
 
 .search-item input:hover {
@@ -310,11 +389,15 @@ a {
   width: 1200px;
   height: 120px;
   padding-top: 36px;
-  margin-left: auto;
-  margin-right: auto;
-  
+  margin: 0 auto;
   /* Временно для сетки */
   outline: solid 3px rgb(219, 20, 136);
+}
+
+.main-footer.position {
+  position: absolute;
+  top: 2627px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .main-footer .footer-container {
@@ -348,8 +431,8 @@ a {
 .footer-copyright {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 197px;
-  margin: 0;
   margin-left: auto;
 
   /* Временно для сетки */
@@ -482,6 +565,7 @@ a {
 .block-rating span {
   font-weight: 400;
   background-color: #F2F2F2;
+  padding: 2px 13px;
 }
 
 .search-results ul {
@@ -502,6 +586,7 @@ a {
 
 .button-list a {
   color: #ffffff;
+  padding: 2px 17px;
 }
 
 .button-detail {
@@ -539,7 +624,7 @@ a {
 html, 
 body {
   min-width: 1200px;
-  min-height: 2762px;
+  min-heigh: 2762px;
 } 
 
 .main-header {
@@ -571,7 +656,6 @@ body {
 
 .site-navigation {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 100%;
   margin: 0;
