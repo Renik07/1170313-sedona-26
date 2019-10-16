@@ -22,7 +22,6 @@ a {
   text-decoration: none;
 }
 
-/* HEADER */
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
@@ -59,7 +58,6 @@ a {
   opacity: 0.5;
 }
 
-/* MAIN */
 .intro {
   width: 1200px;
   height: auto;
@@ -160,7 +158,6 @@ a {
   margin-bottom: 21px;
 }
 
-/* Форма поиска гостиницы */
 .search {
   padding-bottom: 0;
   position: relative;
@@ -337,7 +334,6 @@ a {
   margin: 0 auto;
 }
 
-/* ---------FOOTER -------------- */
 .footer-visit {
   font-size: 21px;
   line-height: 26px;
@@ -390,6 +386,10 @@ a {
   padding: 30px 0;
 }
 
+.footer-hotels {
+  padding-top: 35px;
+}
+
 .main-footer.position {
   position: relative;
   margin-top: -123px;
@@ -432,7 +432,6 @@ a {
   height: 40px;
 }
 
-/* ----------  hotels.html -------------*/
 .visually-hidden {
   visibility: hidden;
   margin: 0 auto;
@@ -445,8 +444,6 @@ a {
 .container-hotel {
   width: 1200px;
   margin: 0 auto;
-  /* Временно для сетки */
-  outline: solid 3px rgb(23, 233, 34);
 }
 
 .container-hotel h1 {
@@ -461,9 +458,9 @@ a {
   background-color: #5496BD;
   background-image: url(../img/blur-background.jpg);
   background-repeat: no-repeat;
+  background-position-y: -54px;
   color: #ffffff;
-  /* Временно для сетки */
-  outline: solid 3px rgb(40, 27, 156);
+  padding: 27px 72px 5px;
 }
 
 .filter {
@@ -474,31 +471,199 @@ a {
 .filter fieldset {
   padding: 0;
   border: none;
-  margin-left: 72px;
-  /* Временно для сетки */
-  outline: solid 3px rgb(206, 255, 31);
+}
+
+.filter fieldset:nth-child(1) {
+  margin-right: -230px;
 }
 
 .filter legend {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 16px;
   line-height: 21px;
-  padding-top: 5px;
+}
+
+.filter-option {
+  padding-left: 37px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 0;
+  width: 26px;
+  height: 25px;
+  background-image: url("/img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -39px;
+  width: 26px;
+  height: 25px;
+  background-image: url("/img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-range {
-  margin-right: 72px;
-  /* Временно для сетки */
-  outline: solid 3px rgb(206, 255, 31);
+  padding: 0;
+  margin: 0;
+  width: 318px;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+  font-size: 16px;
+}
+
+.price-controls {
+  position: relative;
+  height: 34px;
+  margin-bottom: 18px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 35px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+
+.main-sort {
+  width: 1056px;
+  padding: 34px 72px 33px;
+  border-bottom: 1px solid rgb(233, 233, 233);
 }
 
 .container-sort {
+  margin: 0;
+  padding: 0;
+  width: 1056px;
   display: flex;
-  margin-left: 72px;
-  margin-right: 72px;
   justify-content: space-between;
   align-items: center;
-  /* Временно для сетки */
-  outline: solid 3px rgb(255, 31, 31);
 }
 
 .sort {
@@ -506,21 +671,20 @@ a {
   justify-content: space-between;
   width: 518px;
   align-items: center;
-  /* Временно для сетки */
-  outline: solid 3px rgb(31, 255, 68);
 }
 
 .filter ul,
 .sort ul {
-  list-style: none;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .sort h3 {
+  padding: 0;
+  margin: 0;
   font-size: 21px;
   font-weight: bold;
-  /* Временно для сетки */
-  outline: solid 1px rgb(31, 229, 255);
 }
 
 .sort-items {
@@ -528,26 +692,24 @@ a {
   width: 240px;
   justify-content: space-between;
   align-items: center;
-  /* Временно для сетки */
-  outline: solid 1px rgb(0, 0, 0);
 }
 
 .sort p,
 .sort a {
+  padding: 0;
+  margin: 0;
   font-size: 12px;
   font-weight: 400;
-  /* Временно для сетки */
-  outline: solid 1px rgb(31, 229, 255);
 }
 
 .sort a {
   color: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px dashed #81B3D2;
+  border-bottom: 1px dotted #81B3D2;
 }
 
 .sort a:hover {
   color: #81B3D2;
-  border-bottom: 1px dashed #81B3D2;
+  border-bottom: 1px dotted #81B3D2;
 }
 
 .sort a:active {
@@ -555,10 +717,23 @@ a {
   border-bottom: none;
 }
 
+.sort-items li:nth-child(1) a {
+  color: #81B3D2;
+  border: none;
+}
+
+.sort-up-down a {
+  padding-left: 9px;
+}
+
+.sort-up-down a:last-child svg {
+  fill: #81B3D2;
+}
+
 .block-rating span {
   font-weight: 400;
   background-color: #F2F2F2;
-  padding: 2px 13px;
+  padding: 3px 13px;
 }
 
 .search-results ul {
@@ -571,23 +746,19 @@ a {
   padding: 0;
   margin: 0;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 15px;
   font-weight: bold;
-  /* Временно для сетки */
-  outline: solid 2px rgb(255, 31, 31);
 }
 
 .search-results-item p {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
-  /* Временно для сетки */
-  outline: solid 2px rgb(255, 1, 242);
 }
 
 .button-list a {
   color: #ffffff;
-  padding: 2px 17px;
+  padding: 3px 17px;
 }
 
 .button-detail {
@@ -620,7 +791,6 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/*   СЕТОЧНЫЕ СТИЛИ     */
 html, 
 body {
   min-width: 1200px;
@@ -656,12 +826,9 @@ body {
   list-style: none;
 }
 
-/* -----Результаты поиска гостиницы ----*/
 .search-results {
   width: 1200px;
   margin: auto;
-  /* Временно для сетки */
-  outline: solid 3px rgb(40, 27, 156);
 }
 
 .search-results-item {
@@ -670,18 +837,14 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1056px;
-  padding: 30px 72px 30px 72px;
-  /* Временно для сетки */
-  outline: solid 3px rgb(41, 171, 247);
+  padding: 29px 72px 30px 72px;
+  border-bottom: 1px solid rgb(233, 233, 233);
 }
 
 .block-hotel {
   display: flex;
   justify-content: space-between;
   width: 423px;
-  height: 90px;
-  /* Временно для сетки */
-  outline: solid 3px rgb(7, 187, 52);
 }
 
 .block-rating {
@@ -690,9 +853,6 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   width: 111px;
-  height: 90px;
-  /* Временно для сетки */
-  outline: solid 3px rgb(7, 187, 52);
 }
 
 .hotel-name {
@@ -700,9 +860,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 258px;
-  height: 90px;
-  /* Временно для сетки */
-  outline: solid 3px rgb(187, 7, 133);
 }
 
 .hotel-name h2,

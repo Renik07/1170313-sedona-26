@@ -32,16 +32,17 @@
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul>
-              <li>
-                <input type="checkbox" name="pool" id="filter-pool" checked>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool"
+                  checked>
                 <label for="filter-pool">Бассейн</label>
               </li>
-              <li>
-                <input type="checkbox" name="parking" id="filter-parking">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
                 <label for="filter-parking">Парковка</label>
               </li>
-              <li>
-                <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
                 <label for="filter-wi-fi">Wi-Fi</label>
               </li>
             </ul>
@@ -49,60 +50,70 @@
           <fieldset>
             <legend>Тип жилья:</legend>
             <ul>
-              <li>
-                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel"
+                  checked>
                 <label for="filter-hotel">Гостиница</label>
               </li>
-              <li>
-                <input type="checkbox" name="motel" id="filter-motel" checked>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="filter-motel"
+                  checked>
                 <label for="filter-motel">Мотель</label>
               </li>
-              <li>
-                <input type="checkbox" name="wi-fi" id="filter-wi-fi" checked>
-                <label for="filter-wi-fi">Wi-Fi</label>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="appart" id="filter-appart"
+                  checked>
+                <label for="filter-appart">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
           <div class="filter-range">
-            <h3 class="filter-range-title">Стоимость в сутки (Р):</h3>
-            <!-- <input type="text">
-            <input type="text">
-            <div class="range-slider">
-              <button class="range-slider-left"></button>
-              <button class="range-slider-right"></button>
-            </div> -->
-            <button type="submit">Показать</button>
+            <div class="filter-range-title">Стоимость в сутки (Р):</div>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
           </div>
         </form>
       </section>
     </section>
-    <section class="container-sort">
-      <div class="sort">
-        <h3>Найдено:3</h3>
-        <p>Сортировка:</p>
-        <ul class="sort-items">
-          <li>
-            <a href="">По цене</a>
-          </li>
-          <li>
-            <a href="">По типу</a>
-          </li>
-          <li>
-            <a href="">По рейтингу</a>
-          </li>
-        </ul>
-      </div>
-      <div class="sort-up-down">
-        <a href="">
-          <svg class="up" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-            <path d="M5.5 0L0 10h11z"></path>
-          </svg>
-        </a>
-        <a href="">
-          <svg class="down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-            <path d="M5.5 10L0 0h11"></path>
-          </svg>
-        </a>
+    <section class="main-sort">
+      <div class="container-sort">
+        <div class="sort">
+          <h3>Найдено: 3</h3>
+          <p>Сортировка:</p>
+          <ul class="sort-items">
+            <li>
+              <a href="">По цене</a>
+            </li>
+            <li>
+              <a href="">По типу</a>
+            </li>
+            <li>
+              <a href="">По рейтингу</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sort-up-down">
+          <a href="">
+            <svg class="up" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path d="M5.5 0L0 10h11z"></path>
+            </svg>
+          </a>
+          <a href="">
+            <svg class="down" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path d="M5.5 10L0 0h11"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
     <section class="search-results">
@@ -130,10 +141,10 @@
             </div>
             <div class="block-rating">
               <div class="stars">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="" height="">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="" height="">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="" height="">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="" height="">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="19" height="17">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="19" height="17">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="19" height="17">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="19" height="17">
               </div>
               <span>рейтинг: 8,5</span>
             </div>
@@ -142,12 +153,17 @@
         <li>
           <article class="search-results-item">
             <div class="block-hotel">
-              <a href=""><img src="img/hotel-2.jpg" alt="Мотель Desert Quail & Spa" width="135" height="90"></a>
+              <img src="img/hotel-2.jpg" alt="Мотель Desert Quail INN" width="135" height="90">
               <div div class="hotel-name">
-                <h2>Desert Quail & Spa</h2>
-                <p>
-                  Мотель от 3000 р.
-                </p>
+                <h2>Desert Quail INN</h2>
+                <div class="hotel-cost">
+                  <p>
+                    Мотель
+                  </p>
+                  <p>
+                    от 3000 р.
+                  </p>
+                </div>
                 <p class="button-list">
                   <a class="button-detail" href="">Подробнее</a>
                   <a class="button-reserve" href="">Забронировать</a>
@@ -156,9 +172,9 @@
             </div>
             <div class="block-rating">
               <div class="stars">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 3 звезды" width="" height="">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="" height="">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="" height="">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 3 звезды" width="19" height="17">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 3 звезды" width="19" height="17">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 3 звезды" width="19" height="17">
               </div>
               <span>рейтинг: 8,9</span>
             </div>
@@ -167,12 +183,17 @@
         <li>
           <article class="search-results-item">
             <div class="block-hotel">
-              <a href=""><img src="img/hotel-3.jpg" alt="Апартаменты Villas At Poco Diablo" width="135" height="90"></a>
+              <img src="img/hotel-3.jpg" alt="Апартаменты Villas At Poco Diablo" width="135" height="90">
               <div div class="hotel-name">
                 <h2>Villas At Poco Diablo</h2>
-                <p>
-                  Аппартаменты от 2000 р.
-                </p>
+                <div class="hotel-cost">
+                  <p>
+                    Апартаменты
+                  </p>
+                  <p>
+                    от 2000 р.
+                  </p>
+                </div>
                 <p class="button-list">
                   <a class="button-detail" href="">Подробнее</a>
                   <a class="button-reserve" href="">Забронировать</a>
@@ -181,8 +202,8 @@
             </div>
             <div class="block-rating">
               <div class="stars">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 2 звезды" width="" height="">
-                <img src="img/star.svg" alt="Рейтинг гостиницы 4 звезды" width="" height="">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 2 звезды" width="19" height="17">
+                <img src="img/star.svg" alt="Рейтинг гостиницы 2 звезды" width="19" height="17">
               </div>
               <span>рейтинг: 9,2</span>
             </div>
@@ -190,9 +211,8 @@
         </li>
       </ul>
     </section>
-
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer footer-hotels">
     <div class="footer-container">
       <p class="footer-visit">
         #Visitsedona
@@ -229,7 +249,6 @@
         </a>
       </div>
     </div>
-
   </footer>
 </body>
 
