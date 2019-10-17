@@ -465,16 +465,12 @@ a {
 
 .filter {
   display: flex;
-  justify-content: space-between;
 }
 
 .filter fieldset {
   padding: 0;
   border: none;
-}
-
-.filter fieldset:nth-child(1) {
-  margin-right: -230px;
+  margin-right: 115px;
 }
 
 .filter legend {
@@ -540,6 +536,7 @@ input[type="checkbox"].visually-hidden {
   padding: 0;
   margin: 0;
   width: 318px;
+  margin-left: auto;
 }
 
 .filter-range-title {
@@ -563,7 +560,7 @@ input[type="checkbox"].visually-hidden {
   left: 50%;
   width: 2px;
   height: 22px;
-  background: #ffffff;
+  background-color: #ffffff;
   transform: translate(-50%, -50%);
 }
 
@@ -650,9 +647,7 @@ input[type="checkbox"].visually-hidden {
   background: #ffffff;
 }
 
-
 .main-sort {
-  width: 1056px;
   padding: 34px 72px 33px;
   border-bottom: 1px solid rgb(233, 233, 233);
 }
