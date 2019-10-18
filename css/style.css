@@ -418,6 +418,7 @@ a {
   margin: 0;
   width: 150px;
   height: 48px;
+  list-style: none;
 }
 
 .footer-copyright {
