@@ -26,7 +26,6 @@ a {
   font-size: 14px;
   line-height: 26px;
   color: #000000;
-  position: relative;
 }
 
 .site-navigation {
@@ -108,35 +107,37 @@ a {
 .features-list {
   display: flex;
   text-align: center;
+  min-height: 256px;
 }
 
 .features-items.grow {
+  display: flex;
   flex-grow: 1;
 }
 
 .features-items {
   align-items: center; 
   width: 400px;
-  height: 256px;
 }
 
 .features-items.block-3 {
   box-sizing: border-box;
-  padding-top: 46px;
-  padding-bottom: 46px;
+  padding: 46px 65px 39px 65px;
   background-color: #eeeeee;
 }
 
 .features-items.block {
   background-color: #81B3D2;
   color:#ffffff;
+  padding-left: 49px;
+  padding-right: 49px;
 }
 
 .features-items.block-2 {
   padding: 0;
   margin: 0;
   padding-top: 57px;
-  padding-bottom: 17px;
+  padding-bottom: 57px;
 }
 
 .features-items.block-2 img {
@@ -217,7 +218,7 @@ a {
 }
 
 .search-item-elements .kids {
-  margin-right: 30px;
+  margin-right: 27px;
 }
 
 .button.calendar {
@@ -236,7 +237,7 @@ a {
 
 .search-item-elements input {
   padding: 0;
-  width: 38px;
+  width: 34px;
   height: 34px;
   text-align: center;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -400,37 +401,42 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 968px;
-  margin-left: 132px;
+  width: 1200px;
   margin-right: auto;
 }
 
 .footer-visit {
+  display: block;
   margin: 0;
-  width: 136px;
-  margin-right: 256px;
+  width: 400px;
+  text-align: center;
 }
 
 .footer-social {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
   margin: 0;
-  width: 150px;
+  width: 400px;
   height: 48px;
   list-style: none;
+}
+
+.footer-social li {
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .footer-copyright {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 197px;
-  margin-left: auto;
+  justify-content: center;
+  width: 400px;
 }
 
 .footer-copyright a {
   height: 40px;
+  margin-left: 9px;
 }
 
 .visually-hidden {
@@ -516,7 +522,7 @@ input[type="checkbox"].visually-hidden {
   top: 0;
   width: 26px;
   height: 25px;
-  background-image: url("/img/checkbox-off.svg");
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -528,7 +534,7 @@ input[type="checkbox"].visually-hidden {
   left: -39px;
   width: 26px;
   height: 25px;
-  background-image: url("/img/checkbox-on.svg");
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -793,6 +799,7 @@ body {
 } 
 
 .main-header {
+  position: relative;
   height: 56px;
 }
 
